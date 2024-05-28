@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/src/output.css" rel="stylesheet" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/src/input.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+              integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+              crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>user</title>
+    </head>
+<body>
+    <nav class="flex items-center justify-between gap-10 p-[9px] border border-[#D5E7E5]">
+        <div class="flex items-center gap-20">
+            <div class="ml-[26px]">
+                <img src="/images/Group 181.png" class="w-[148px] h-[61px]" />
+            </div>
+            <div>
+                <h2 class="font-bold text-[28px] leading-[42px] text-[#2B3674]">User</h2>
+                <p class="font-medium text-[14px] leading-[24px] text-[#707EAE]">User / All Users</p>
+            </div>
+        </div>
+        <div class="relative w-[422px]">
+            <img src="/images/Search Icon.png" class="absolute top-[20px] left-[23px]" />
+            <input type="search" class="w-full h-[47px] bg-white rounded-[30px] outline-none pl-[40px] cursor-pointer box-shadow" placeholder="search">
+            <div class="absolute flex gap-2 items-center top-[10px] right-[8px]">
+                <img src="/images/notifications_none.svg" class="w-[20px] h-[20px]" />
+                <img src="/images/moon-solid 1.svg" class="w-[15px] h-[15px]" />
+                <img src="/images/info_outline.svg" class="w-[20px] h-[20px]" />
+                <img src="/images/Avatar Style 6.png" class="w-[24px] h-[24px]" />
+            </div>
+        </div>
+    </nav>
+
+    <!-- sidebar  -->
+    <div
+    id="sidebar"
+          class="sidebar mt-[86px] bg-white overflow-auto fixed top-0 left-0 z-40 w-64 h-screen transition-transform   flex flex-col py-[10px] border-r border-[#DFEAF0] ">
+          <div className="  flex flex-col items-center w-[284px] h-[44px]   gap-3 ">
+              <div class="mt-[17px] ">
+                  <a href="/Pages/Dashboard.html" class="flex items-center p-4 text-gray-900  w-full hover:bg-[#A4FCF7]  group">
+                 <img src="/images/element-plus.svg">
+                     <span class="ms-3">Dashboard</span>
+                  </a>
+              </div>
+              <div>
+                  <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                      <img src="/images/profile.svg">
+                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Users</span>
+                        <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('users')">
+                  </a>
+                  <ul id="users" class="hidden py-2 space-y-2">
+                        <li>
+                           <a href="/Pages/AllUser.html" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                        </li>
+                        <li>
+                           <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                        </li>
+                  </ul>
+              </div>
+              <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/profile-2user.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">User Management</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('User-Management')">
+                </a>
+                <ul id="User-Management" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/note-2.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Biddings</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Biddings')">
+                </a>
+                <ul id="Biddings" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/receipt-minus.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Posted Services </span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Posted-Services')">
+                </a>
+                <ul id="Posted-Services" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/empty-wallet-add.svg">
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Transactions </span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Transactions')">
+                </a>
+                <ul id="Transactions" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/element-plus.svg"/>
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Profile Report</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Profile-Report')">
+                </a>
+                <ul id="Profile-Report" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/element-plus.svg"/>
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Communities</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Communities')">
+                </a>
+                <ul id="Communities" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/element-plus.svg"/>
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Events</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Events')">
+                </a>
+                <ul id="Events" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/notification-bing.svg"/>
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Notifications</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Notifications')">
+                </a>
+                <ul id="Notifications" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#"  class="flex items-center  p-4 text-base text-gray-900 transition duration-75  w-full hover:bg-[#A4FCF7] " aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                    <img src="/images/setting-2.svg"/>
+                      <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Settings</span>
+                      <img src="/images/chevron-right.png" class="w-[20px]" onclick="toggleSubItems('Settings')">
+                </a>
+                <ul id="Settings" class="hidden py-2 space-y-2">
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75  group "><img src="/images/element-plus.svg"/>All Users</a>
+                      </li>
+                      <li>
+                         <a href="" class="flex items-center gap-4 w-full p-4 text-gray-900 transition  hover:bg-[#A4FCF7] duration-75 r group"><img src="/images/element-plus.svg"/>Premimum users</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+  </div>
+
+  <div class="pl-[16%] pr-[47px] pt-[1rem]">
+    <!-- <div class=" flex justify-between">
+        <div class="flex gap-2">
+            <div class="relative">
+                <img src="/images/Search Icon.png" class="absolute top-[20px] left-[23px]" />
+                <input type="search" class="w-full lg:w-[680px] h-[47px] bg-white rounded-[30px] outline-none pl-[40px] cursor-pointer border border-[#E9E9EA]" placeholder="search">
+                <div class="flex justify-end">
+                  <img src="/images/sliders.png" class="absolute top-[15px] right-[13px]"/>
+                  </div>
+            </div>
+
+            <div class="w-[121px] h-[47px] bg-white rounded-[30px] outline-none cursor-pointer border px-[14px] py-[10px] border-[#E9E9EA] relative">Filter
+                <img src="/images/Union 14.png" class="absolute top-[15px] right-[13px]"/>
+            </div>
+
+            <div class="w-[121px] h-[47px] bg-white rounded-[30px] outline-none  cursor-pointer  px-[14px] py-[10px] border border-[#E9E9EA] relative">Sort
+                <img src="/images/Union 15.png" class="absolute top-[15px] right-[13px]"/>
+            </div>
+        </div>
+        <div class="w-[138px] h-[47px] rounded-[30px] outline-none cursor-pointer bg-[#19DBCC] px-[23px] pt-[11px]  text-black relative">
+            Export
+            <img src="/images/export.png" class="absolute top-[13px] right-[36px]"/>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="overflow-x-auto mt-5">
+            <table id="table-body" class=" min-w-full">
+              <thead class="bg-[#A4FCF7] text-black">
+                <tr>
+                  <th class="px-4 py-2 whitespace-nowrap">ID</th>
+                  <th class="px-4 py-2 whitespace-nowrap">User Name</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Email Address</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Mobile Number</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Country</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Last Login</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Services</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Tasks</th>
+                  <th class="px-4 py-2 whitespace-nowrap">Action</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr class="bg-white my-4 mt-5">
+                  <td class="px-4 py-2 text-center whitespace-nowrap">001</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">John Deo</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">Johndeo1232gmail.com</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">9988665533</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">United States</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">08/08/2023 </td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">4 Services</td>
+                  <td class="px-4 py-2 text-center whitespace-nowrap">50 Tasks</td>
+                  <td
+                    class="px-4 py-2 text-center flex justify-center items-center gap-2 whitespace-nowrap"
+                  >
+                    <img src="/images/Group 1171274891.png"   id="view"/>
+                <div class="w-[28px] h-[28px] bg-[#F56062] rounded-full relative ">
+                    <img src="/images/Path 164.png" class="absolute top-[7px] left-[8px]" />
+                </div>
+                  
+                  </td>
+                </tr>
+                <!-- Add more rows as necessary -->
+              </tbody>
+            </table>
+          </div>
+    </div> -->
+  </div>
+  <script>
+    function toggleSubItems(id) {
+        const element = document.getElementById(id);
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+        } else {
+            element.classList.add('hidden');
+        }
+    }
+      </script>
+</body>
+</html>
